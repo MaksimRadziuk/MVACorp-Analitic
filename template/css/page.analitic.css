@@ -893,14 +893,22 @@ table {
         font-weight: 100;
         padding: 10px;
     }
-    #table1 tr:first-child th {
-        border-bottom: 1px solid #f88691;
+    #table1 tr:first-child td {
+        border-top:none;
+    }
+    #table1 tr:last-child td {
+        border-bottom:none;
     }
     #table1 td {
         padding: 10px;
         font-family: Roboto;
         font-weight: 100;
         color: #394048;
+        border-bottom: 1px solid #e5e5e5;
+        border-top: 1px solid #e5e5e5;
+    }
+    #table1 td.red {
+        color: #f54657;
     }
     #table1 .header-text{
         width: 100%;
