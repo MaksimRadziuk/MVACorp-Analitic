@@ -34,19 +34,21 @@
     z-index: 3;
     overflow: hidden;
 }
-.title:before {
-    content: '';
+.title h1 {
     display: block;
-    position: absolute;
-    left: 0;
     width: 100%;
     height: 100%;
-    background-image: url(../img/analitic-title.png);
-    background-repeat: no-repeat;
-    background-position: left bottom;
-    background-size: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    font-size: 5vw;
     opacity: 0.1;
     animation: 3s titleAppearance ease;
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    font-family: Bicubik;
+    margin: 0;
 }
 .description {
     position: absolute;
@@ -66,7 +68,7 @@
 }
 .description-wrap {
     position: relative;
-    margin-top: 165px;
+    margin-top: 115px;
     padding-left: 20px;
     height: 65px;
     box-sizing: border-box;
@@ -77,10 +79,10 @@
 .description-wrap:before {
     content: '';
     position: absolute;
-    bottom: 0;
+    bottom: -50px;
     left: 0;
     width: 5px;
-    height: 60px;
+    height: 113px;
     background-color: #a8c61e;
 }
 .description-wrap p{
@@ -101,6 +103,23 @@
     color: #a8c61e;
     margin-left: 15px;
     margin-top: 10px;
+}
+.description-wrap2 {
+    position: absolute;
+    top: 175px;
+    left: calc(50% + 20px);
+    letter-spacing: 1px;
+}
+.description-wrap2 p{
+    font-family: RobotoLight, sans-serif;
+    font-size: 16px;
+    font-weight: 100;
+    color: #fff;
+    margin-bottom: 5px;
+}
+.description-wrap2 p span{
+    color: #1decee;
+    font-family: RobotoLight, sans-serif;
 }
 .cardBox {
     position: relative;
@@ -434,6 +453,9 @@ table {
     .title {
         width: 45%;
     }
+    .title h1 {
+        font-size: 4.9vw;
+    }
 }
 @media all and (max-width: 1555px)   {
     .tab-content {
@@ -446,6 +468,10 @@ table {
     }
     .table-box {
         width: 100%;
+    }
+    .title {
+        height: 60px;
+        top: 165px;
     }
 }
 @media all and (max-width: 1386px)   {
@@ -487,6 +513,9 @@ table {
     }
     #panel1 .header-text {
         width: 100%;
+    }
+    .title {
+        top: 175px;
     }
 }
 @media all and (max-width: 1265px) {
@@ -592,13 +621,38 @@ table {
         align-items: flex-end;
     }
     .description-wrap p:first-child {
-        margin-bottom: 10px;
+        margin-bottom: 20px;
     }
     .description-wrap:before {
-        height: 50px;
+        height: 40px;
+        bottom: 0;
     }
     .title {
-        top: 80px;
+        top: 115px;
+    }
+    .description-wrap span {
+        font-size: 30px;
+    }
+    .description-wrap p {
+        font-size: 14px;
+    }
+    .description-wrap2 {
+        width: 100%;
+        position: relative;
+        top: 160px;
+        left: 0;
+        height: 40px;
+        background-color: #5c646d;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        z-index: 9;
+    }
+    .description-wrap2 p {
+        display: inline;
+        font-size: 14px;
+        margin-left: 30px;
+        margin-bottom: 0;
     }
 }
 @media all and (max-width:1014px)   {
@@ -611,6 +665,9 @@ table {
     .cardBox .nav li:nth-child(1) a{
         padding-top: 14px;
         padding-bottom: 14px;
+    }
+    .tab-content {
+        padding-left: 5px;
     }
 }
 @media all and (max-width: 900px) {
@@ -725,8 +782,11 @@ table {
 @media all and (max-width: 768px) {
     .title {
         width: 50%;
+        top: 120px;
     }
-    
+    .title h1 {
+        font-size: 5.2vw;
+    }
     .footer .foot-text {
         bottom: 50px;
         width: 435px;
@@ -820,7 +880,17 @@ table {
         height: 40px;
     }
 }
-
+@media all and (max-width: 640px) {
+    .description-wrap2 p:first-child {
+        margin-left: 20px;
+    }
+    .title h1 {
+        font-size: 5.5vw;
+    }
+    .title {
+        top: 127px;
+    }
+}
 @media all and (max-width: 634px) {
     .cardBox .nav li:nth-child(4) a {
         font-size: 8px;
@@ -1095,7 +1165,17 @@ table {
     .mail-order {
         display: none;
     }
-
+    .description-wrap2 {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .description-wrap2 p {
+        margin-bottom: 0;
+        margin-left: 10px;
+    }
+    .description-wrap2 p:first-child {
+        margin-left: 10px;
+    }
 }
 @media all and (max-width: 520px) {
     .order {
@@ -1129,7 +1209,7 @@ table {
         margin-left: 2.5%;
     }
     .cardBox-mobile {
-        margin-top: 210px;
+        margin-top: 225px;
     }
     .description {
         left: 20px;
@@ -1137,12 +1217,21 @@ table {
         width: 215px;
     }
     .description-wrap {
-        margin-top: 0;
+        margin-top: 10px;
         border:none;
         padding-left: 0;
     }
     .description-wrap:before {
         display: none;
+    }
+    .description-wrap2 {
+        top: 225px;
+        height: 60px;
+        justify-content: space-around;
+        padding: 10px 0;
+    }
+    .title h1 {
+        font-size: 10vw;
     }
 }
 @media all and (max-width: 505px) {
