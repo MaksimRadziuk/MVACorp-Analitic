@@ -41,7 +41,7 @@
     position: absolute;
     left: 0;
     bottom: 0;
-    font-size: 5vw;
+    font-size: 4.9vw;
     opacity: 0.1;
     animation: 3s titleAppearance ease;
     text-align: center;
@@ -454,7 +454,7 @@ table {
         width: 45%;
     }
     .title h1 {
-        font-size: 4.9vw;
+        font-size: 4.8vw;
     }
 }
 @media all and (max-width: 1555px)   {
